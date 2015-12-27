@@ -1,0 +1,99 @@
+<input type="text" required class="form-control" id="def" name="def" ng-model="vm.definition" required>
+<!-- <img src="{{user.uiImage}}" alt="" class="img-circle img30_30 thumb" ng-click="chooseAvatar()">
+<button type="button" class="btn btn-info" ng-click="vm.chooseAvatar(0)">button</button>
+<form id="fileUploadForm" method="post" enctype="multipart/form-data">
+			<div class="hide">
+						<input id="img0" type="file" ng-model="picFile" name="files[]" accept="image/*" ng-file-select="vm.generateThumb(picFile[0], $files)" class="hide ng-pristine ng-untouched ng-valid ng-valid-required"
+						required=""/>
+			</div>
+</form> -->
+{{vm.domain}}
+<div class="row grid-divider">
+	<div class="col-sm-9">
+		<div class="col-padding">
+			<h3>Intrebare</h3>
+			<textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.definition"></textarea>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Imagine</h3>
+			<input type="file" ngf-select ng-model="vm.picFileDef" name="file" accept="image/*" required>
+			<img ng-show="vm.picFileDef != undefined" ngf-src="vm.picFileDef" class="thumb img-circle">
+		</div>
+	</div>
+</div>
+
+
+<div class="row grid-divider">
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Raspuns corect</h3>
+			<textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.ans1"></textarea>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Raspuns gresit</h3>
+			<textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.ans2"></textarea>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Raspuns gresit</h3>
+			<textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.ans3"></textarea>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Raspuns gresit</h3>
+			<textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.ans4"></textarea>
+		</div>
+	</div>
+</div>
+
+
+<div class="row grid-divider">
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Imagine </h3>
+			<input type="file" ngf-select ng-model="vm.picFile1" name="file" accept="image/*" required>
+<img ng-show="vm.picFile1 != undefined" ngf-src="vm.picFile1" class="thumb img-circle">
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Imagine</h3>
+			<input type="file" ngf-select ng-model="vm.picFile2" name="file" accept="image/*" required>
+<img ng-show="vm.picFile2 != undefined" ngf-src="vm.picFile2" class="thumb img-circle">
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Imagine</h3>
+			<input type="file" ngf-select ng-model="vm.picFile3" name="file" accept="image/*" required>
+<img ng-show="vm.picFile3 != undefined" ngf-src="vm.picFile3" class="thumb img-circle">
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="col-padding">
+			<h3>Imagine</h3>
+			<input type="file" ngf-select ng-model="vm.picFile4" name="file" accept="image/*" required>
+<img ng-show="vm.picFile4 != undefined" ngf-src="vm.picFile4" class="thumb img-circle">
+		</div>
+	</div>
+</div>
+
+<!-- <input type="text" required class="form-control" id="ans1" name="ans1" ng-model="vm.ans1" required>
+<input type="file" ngf-select ng-model="vm.picFile1" name="file" accept="image/*" required>
+<img ngf-src="vm.picFile1" class="thumb img-circle">
+<input type="text" required class="form-control" id="ans2" name="ans2" ng-model="vm.ans2" required>
+<input type="file" ngf-select ng-model="vm.picFile2" name="file" accept="image/*" required>
+<img ngf-src="vm.picFile2" class="thumb img-circle">
+<input type="text" required class="form-control" id="ans3" name="ans3" ng-model="vm.ans3" required>
+<input type="file" ngf-select ng-model="vm.picFile3" name="file" accept="image/*" required>
+<img ngf-src="vm.picFile3" class="thumb img-circle">
+<input type="text" required class="form-control" id="ans4" name="ans4" ng-model="vm.ans4" required>
+<input type="file" ngf-select ng-model="vm.picFile4" name="file" accept="image/*" required>
+<img ngf-src="vm.picFile4" class="thumb img-circle"> -->
+<button type="button" class="btn btn-primary" ng-click="vm.saveQuizQuestion()">Save</button>

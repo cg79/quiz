@@ -1,0 +1,488 @@
+// Include reset
+@import "reset";
+// Import base components
+@import "base";
+// Include mixines
+@import "mixines";
+
+// Custom styles
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+.wrapper{
+    min-height: 100%;
+    position: relative;
+}
+
+/*Menu*/
+.navbar-default{
+	background: $white;
+	border: none;
+}
+.navbar-brand{
+	height: auto;
+}
+.navbar-right{
+	margin-top: 20px;
+	.cr-logged-user-name{
+		line-height: 30px;
+	}
+}
+
+.logo{
+    width: 380px;
+    height: 40px;    
+}
+.btn,
+.btn *{
+	font-family: $Neutraface2Text-Demi;
+	text-transform: uppercase;
+}
+
+i{
+	font-family: $icon-font;
+}
+
+.navbar-right .btn{
+	@include rounded-corner(50px); 	
+	@include fade;
+	color: $white !important;
+	text-decoration:none;	
+    padding: 6px 14px 2px 14px;
+	margin: 0 0 0 10px;;
+	font-family: $Neutraface2Text-Demi;
+	text-transform: uppercase;	
+}
+
+.btn-yellow {
+	background: $yellow;
+}
+
+.btn-yellow:hover ,
+.btn-yellow:focus {
+	background: $blue !important;
+}
+
+.navbar-right ul{
+	margin: 0;
+	li {
+	    float: left;
+	    margin: 0 0 0 16px;
+			a {
+			@include rounded-corner(29px); 	
+		    position: relative;
+		    display: block;
+		    height: 30px;
+		    font-family: $Neutraface2Text-Demi;
+		    color: #ffffff;		    		    
+		    letter-spacing: 1px;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    background-color: #fcaf17;
+		    overflow: hidden;
+		    transition: all 200ms ease-out;
+		    -webkit-transition: all 200ms ease-out;
+		    -moz-transition: all 200ms ease-out;
+		    -o-transition: all 200ms ease-out;
+		    span {
+			    position: relative;
+			    display: block;
+			    z-index: 9;
+				
+			}
+		}
+	}
+}
+
+li a span.nav-btn{
+	font-size: 17px !important;
+}
+
+.nav-btn{
+    padding: 0px 10px 0px 30px;
+	background-size: 18px auto;
+	background-repeat: no-repeat;
+	background-position: 5px 0px;
+	a.contact-icon &{
+		background-image: url(../images/small-email-icon.png);
+	}
+	a.sign-up &{
+		background-image: url(../images/small-sign-up-icon.png);
+	}
+	a.login &{
+		background-image: url(../images/small-login-icon.png);
+	}
+}	
+.navbar{
+	margin-bottom: 0;
+}
+.navbar .row{
+	border-bottom: 7px solid $yellow;
+}
+.inner-menu{
+	background: $blue;	
+}
+
+#navbar-inner ul li {
+	a{
+		@include rounded-corner(3px !important); 				
+    	padding: 5px 10px;
+    	margin: 10px 0 10px 0;
+		color: $white;
+	}
+	a:hover{
+		background: $blue-light;
+	}
+	a:focus{
+		background: $blue-light;
+	}
+}
+
+#navbar{
+	z-index: 999;
+}
+#navbar-inner{
+	z-index: 998;
+}
+
+/*End Menu*/
+
+/* Form Elements */
+select,
+textarea,
+input{
+	@include rounded-corner(0px !important); 	
+	@include fade;
+	@include box-shadow(0,0,0,$white);
+	&:hover {
+        border-color: $gray-medium;
+    }
+    &:focus {
+		@include box-shadow(0,0,0,$white);
+        border-color: $blue !important;
+    }
+    font-size: 16px !important;
+    font-family: $Neutraface2Text-Book;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.select2-drop{
+	padding: 10px !important;
+}
+.cr-form{
+	/*File upload*/
+	.cr-file-upload {
+		@include fade;			    	    
+		margin: 0;
+		padding: 0;
+		border: 1px solid $gray-medium;		
+		border-radius: 3px 0 0 3px !important;	    
+		padding: 6px 12px;
+		float: left;
+		&:hover{			
+			background: $gray-medium;
+			color: $white;
+		}
+		input{			    
+			position: absolute;
+    		width: 21%;
+    		top: 0;
+    		left: 0;		
+			opacity: 0;
+			filter: alpha(opacity=0);		
+		}
+	} 
+	.cr-file-path {	      
+		border: 1px solid $gray-medium;
+		border-left: none;
+		border-radius: 0 3px 3px 0 !important;
+		height: 33px;
+	    line-height: 22px;
+		padding: 0 10px;
+		background-color: #fff;
+	}		
+	/*End File upload*/
+	textarea{
+		height: 110px;
+	}	
+}
+.cr-profile-logo-img{
+	width: 100%;
+}
+
+.cr-delete-profile-logo-img label{
+	color: $blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.form-control-inline{
+	width: auto;
+    float: left;
+    margin-right: 10px;
+    height: 33px;
+}
+/* End Form Elements */
+
+/* Buttons */
+.btn-square{
+	@include rounded-corner(3px); 	
+	@include fade;
+	color: $white;
+	background: $blue;
+	border: 1px solid $blue;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	text-align: center;
+	&:hover{
+		background: $blue-hover;
+	}
+}
+.btn-square-default{
+	@include rounded-corner(3px); 	
+	@include fade;
+	color: $black;
+	background: $white;
+	border: 1px solid $gray-medium;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	text-align: center;
+	&:hover{
+		background: $gray-medium;
+		color: $white;
+	}
+}
+
+.thumbnail,
+.cr-btn-draggable{
+	@include rounded-corner(0px);	
+}
+
+.btn-info.cr-btn-draggable{
+	background: $yellow;
+	border: 1px solid $yellow;    
+    color: $white;   
+    margin-top: 1px;
+    margin-left: 1px;
+    &:hover{
+    	background-color: $yellow-light;
+    }    
+}
+.cr-mapped-fields .cr-btn-draggable{
+	margin-top: 0px;
+    margin-left: 0px;
+}
+
+/* End Buttons */
+
+.navbar-brand {
+	float: left;
+    display: block;
+    width: auto;
+    height: 37px;
+    padding: 0;
+    margin: 15px 0px;
+}
+
+.navbar-brand img {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.navbar-brand{
+	padding-left: 0;
+}
+
+/* Tabs */
+.nav-tabs{
+	border-bottom: 1px solid #999;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    border: 1px solid #999;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs>li>a:hover{	
+	border-bottom: 1px solid #999;
+}
+
+/* Div Margins / Paddings */
+
+.cr-mb-10{
+	margin-bottom: 10px;
+}
+
+.cr-mt-10{
+	margin-top: 10px;
+}
+
+.cr-bb{
+	border-bottom: 1px solid $gray-light;
+}
+
+.cr-separator{
+	.cr-line{
+		border-bottom: 1px solid $gray-light;
+		margin-top: 15px;
+	}
+	.cr-blank{		
+		margin-top: 15px;
+	}
+}
+
+/* Table */
+.cr-table{
+	th,td{
+		border: 1px solid $gray-light;
+		border-top: 1px solid $gray-light !important;
+	}
+}
+
+/* CSV Import  */
+.cr-thumbnail{
+	background: $white;
+    border: 1px solid $gray-light;   
+}
+
+.cr-thumbnail-small{
+    height: 40px;    
+    padding: 2px;
+}
+
+.custom-height{	
+    overflow: auto;
+    display: block;
+	&.csv-fields-step-1{	
+	    max-height: 350px;
+	}
+	&.csv-table-step-2{	
+	    max-height: 650px;	    
+	}
+	&.csv-table-step-3{	
+	    max-height: 650px;	    
+	}
+}
+
+/* End  CSV Import  */
+
+
+// footer
+.footer{
+	// position: absolute;
+	// bottom: 0;	
+	// width: 100%;
+	// height: 113px;
+
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+	background: $blue;
+	margin-top: 30px;
+	.cr-footer-logo{
+		img{
+			width: 90px;
+		}
+	}
+	.cr-footer-content{
+		color: $white;
+	}
+}
+.cr-push-footer{
+	height: 150px;	
+}
+
+footer{
+	& > div{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+// end footer
+
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 250px; 
+}
+
+// Text editor 
+.note-editor span{
+	font-size: 13px;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+//Modal popup
+.modal-dialog{
+	max-height: 600px;
+}
+
+.modal-content{
+	padding: 10px;
+}
+
+.close span{
+	font-size: 30px;
+}
+
+//Dropdown
+.cr-autocomplete {
+	.angucomplete-holder{
+		position: relative;
+	}
+	.angucomplete-dropdown{
+		position: absolute;
+	    width: 100%;
+	    background-color: $white;
+		border: 1px solid $gray-medium;
+	    z-index: 2;
+	    padding: 10px;
+    	font-size: 16px;
+    	.angucomplete-description{
+			padding-top: 3px;
+			padding-bottom: 3px;
+			cursor: pointer;			
+    	}
+    	.angucomplete-description:hover{
+    		background-color: $gray-light;
+    	}
+	}
+}
+
+// Custom CSS
+.has-error,
+.msg-error{
+	color: $red;
+	font-size: 15px;
+}
+
+.ng-table td {
+    text-align: center;
+}
+.redText {
+    color: $red;
+}
+#crUploadLogo{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.cr-contacts-fields{
+	max-height: 600px;
+    overflow-x: hidden;
+}
+
+//Media Queries
+
+@media (min-width: 1200px) and (max-width: 1366px){
+	.cr-form .cr-file-path {
+		width: 68%;
+	}
+}

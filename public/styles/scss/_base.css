@@ -1,0 +1,113 @@
+﻿/*-------------------------Fonts----------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-LightItalic';
+  src: url("/src/fonts/Neutraface2Text-LightItalic.eot");
+  src: url("/src/fonts/Neutraface2Text-LightItalic.woff") format("woff"), url("/src/fonts/Neutraface2Text-LightItalic.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-LightItalic.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-Light';
+  src: url("/src/fonts/Neutraface2Text-Light.eot");
+  src: url("/src/fonts/Neutraface2Text-Light.woff") format("woff"), url("/src/fonts/Neutraface2Text-Light.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-Light.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-DemiItalic';
+  src: url("/src/fonts/Neutraface2Text-DemiItalic.eot");
+  src: url("/src/fonts/Neutraface2Text-DemiItalic.woff") format("woff"), url("/src/fonts/Neutraface2Text-DemiItalic.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-DemiItalic.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-Demi';
+  src: url("/src/fonts/Neutraface2Text-Demi.eot");
+  src: url("/src/fonts/Neutraface2Text-Demi.woff") format("woff"), url("/src/fonts/Neutraface2Text-Demi.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-Demi.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-BookItalic';
+  src: url("/src/fonts/Neutraface2Text-BookItalic.eot");
+  src: url("/src/fonts/Neutraface2Text-BookItalic.woff") format("woff"), url("/src/fonts/Neutraface2Text-BookItalic.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-BookItalic.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-Book';
+  src: url("/src/fonts/Neutraface2Text-Book.eot");
+  src: url("/src/fonts/Neutraface2Text-Book.woff") format("woff"), url("/src/fonts/Neutraface2Text-Book.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-Book.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-BoldItalic';
+  src: url("/src/fonts/Neutraface2Text-BoldItalic.eot");
+  src: url("/src/fonts/Neutraface2Text-BoldItalic.woff") format("woff"), url("/src/fonts/Neutraface2Text-BoldItalic.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-BoldItalic.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Text-Bold';
+  src: url("/src/fonts/Neutraface2Text-Bold.eot");
+  src: url("/src/fonts/Neutraface2Text-Bold.woff") format("woff"), url("/src/fonts/Neutraface2Text-Bold.ttf") format("truetype"), url("/src/fonts/Neutraface2Text-Bold.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Titling';
+  src: url("/src/fonts/Neutraface2Display-Titling.eot");
+  src: url("/src/fonts/Neutraface2Display-Titling.woff") format("woff"), url("/src/fonts/Neutraface2Display-Titling.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Titling.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Thin';
+  src: url("/src/fonts/Neutraface2Display-Thin.eot");
+  src: url("/src/fonts/Neutraface2Display-Thin.woff") format("woff"), url("/src/fonts/Neutraface2Display-Thin.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Thin.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Medium';
+  src: url("/src/fonts/Neutraface2Display-Medium.eot");
+  src: url("/src/fonts/Neutraface2Display-Medium.woff") format("woff"), url("/src/fonts/Neutraface2Display-Medium.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Medium.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Light';
+  src: url("/src/fonts/Neutraface2Display-Light.eot");
+  src: url("/src/fonts/Neutraface2Display-Light.woff") format("woff"), url("/src/fonts/Neutraface2Display-Light.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Light.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Inline';
+  src: url("/src/fonts/Neutraface2Display-Inline.eot");
+  src: url("/src/fonts/Neutraface2Display-Inline.woff") format("woff"), url("/src/fonts/Neutraface2Display-Inline.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Inline.svg") format("svg"); }
+
+/*-----------------------------------------------*/
+@font-face {
+  font-family: 'Neutraface2Display-Bold';
+  src: url("/src/fonts/Neutraface2Display-Bold.eot");
+  src: url("/src/fonts/Neutraface2Display-Bold.woff") format("woff"), url("/src/fonts/Neutraface2Display-Bold.ttf") format("truetype"), url("/src/fonts/Neutraface2Display-Bold.svg") format("svg"); }
+
+/*---------------------End Fonts--------------------------*/
+body {
+  font-family: "Neutraface2Text-Book";
+  font-size: 19px; }
+
+h1, h2, h3, h4 {
+  margin: 10px 0 20px 0; }
+
+label, h5, h6 {
+  margin: 5px 0 10px 0; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 29px; }
+
+h3 {
+  font-size: 26px; }
+
+h4 {
+  font-size: 22px; }
+
+span, p, h5 {
+  font-size: 19px; }
+
+h6 {
+  font-size: 17px; }
+

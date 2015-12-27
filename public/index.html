@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+        display: none !important;
+        }
+        </style>
+        
+<style>
+        .body            { margin: 10px; padding: 0; }
+        .text            { font-family: sans-serif; color: blue; text-align: left; }
+        .chart_container { margin-left: auto; margin-right: auto; position: relative; width: 100%; }
+    </style>
+
+    
+        <meta name="description" content="">
+        <link rel="icon" href="favicon.ico">
+        <title ng-bind="title">Crowd Reach App</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400'
+    rel='stylesheet' type='text/css'>
+
+        <base href="/">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- CSS Part-->
+        <link href="components/toastr/toastr.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="components/summernote/dist/summernote.css" rel="stylesheet">
+        <link href="components/ng-tags-input/ng-tags-input.css" rel="stylesheet">
+        <link href="components/gojs/assets/css/goSamples.css" rel="stylesheet">
+        <link href="../components/chessboard.js/css/chessboard.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/mainChess.css">
+    </head>
+    <body>
+        
+        <!-- Main content -->
+        <div ng-include="'app/layout/shell.html'" class="wrapper"></div>
+        <!-- End Main content -->
+        
+        <form id        =  "uploadForm"
+            enctype   =  "multipart/form-data"
+            action    =  "/photo"
+            method    =  "post"
+            >
+            <input type="file" name="avatar" accept="application/x-zip-compressed,image/*" />
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+        <!-- JS Libraries part-->
+        <script src="components/jquery/dist/jquery.js"></script>
+        <script src="components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="components/jquery-form/jquery.form.js"></script>
+        <script src="components/angular/angular.js"></script>
+        <script src="components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="components/angular-resource/angular-resource.js"></script>
+
+
+        <script type="text/javascript" src="components/tinymce/tinymce.js"></script>
+        <script type="text/javascript" src="components/angular-ui-tinymce/src/tinymce.js"></script>
+
+
+        <script src="components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+        <script src="components/ng-file-upload/ng-file-upload.min.js"></script>
+
+        <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="components/angular-ui-mask/dist/mask.js"></script>
+        <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="components/toastr/toastr.js"></script>
+        <script src="components/angular-animate/angular-animate.js"></script>
+        <script src="components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+        <script src="components/ng-file-upload/ng-file-upload.min.js"></script>
+        <script src="components/angularjs-imageupload-directive/public/javascripts/imageupload.js"></script>
+        <script src="components/summernote/dist/summernote.js"></script>
+        <script src="components/angular-summernote/dist/angular-summernote.js"></script>
+        <script src="components/ng-table/dist/ng-table.js"></script>
+        <script src="components/ng-tags-input/ng-tags-input.min.js"></script>
+
+        <script src="components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        
+        <script src="components/jsSHA/src/sha1.js"></script>
+        <script src="components/ng-twitter-api/dist/ng-twitter-api.js"></script>
+        <script src="components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+        <script src="components/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
+        <script src="components/underscore/underscore.js"></script>
+        
+
+
+        <script src="../components/chessboard.js/js/chessboard.js"></script>
+        <script src="../components/chess.js/chess.js"></script>
+        <script src="../components/angular-chessboard/angular-chessboard.js"></script>
+        <script src="../app/chess/angular-chess.js"></script>
+
+
+
+
+
+        <script src="components/gojs/release/go.js"></script>
+        <script src="components/angular-google-chart/ng-google-chart.js"></script>
+
+        <script type="text/javascript" src="components/charts/org/jspdf-ggorgchart.js" ></script>
+<script type="text/javascript" src="components/charts/org/rgbcolor.js"></script> 
+<script type="text/javascript" src="components/charts/org/StackBlur.js"></script>
+<script type="text/javascript" src="components/charts/org/canvg.js"></script> 
+<script type="text/javascript" src="components/charts/org/raphael-ggorgchart.js"></script>  
+<script type="text/javascript" src="components/charts/org/lib_gg_orgchart_v100b1.js"></script>
+<script type="text/javascript" src="components/charts/org/drag-on.js"></script>
+<script type="text/javascript" src="components/charts/org/jsrender.js"></script>
+
+
+
+
+        <!--Facebook API-->
+        <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+        <!-- JS App part-->
+        <!-- MUST INCLUDE MODULE FILEST BEFORE ANYTHING ELSE IN THE ANGULAR APP -->
+        <script src="app/app.module.js"></script>
+        <script src="app/layout/layout.module.js"></script>
+        <script src="app/core/core.module.js"></script>
+        <script src="app/common/common.module.js"></script>
+        <script src="app/core/core.authorization.js"></script>
+        <script src="app/common/common.resources.js"></script>
+        <script src="app/core/core.config.js"></script>
+        <script src="app/core/core.constants.js"></script>
+        <script src="app/core/core.route.js"></script>
+        <script src="app/security/security.service.js"></script>
+        <script src="app/core/core.rest.js"></script>
+        <script src="app/core/core.directive.js"></script>
+        <script src="app/user/login.controller.js"></script>
+        <script src="app/user/login.service.js"></script>
+        <script src="app/user/changepassword.controller.js"></script>
+        <script src="app/user/forgotpassword.controller.js"></script>
+        <script src="app/user/newpassword.controller.js"></script>
+        <script src="app/user/editUserInfo.controller.js"></script>
+
+        <script src="app/user/profile/profile.controller.js"></script>
+
+
+        <script src="app/layout/home.controller.js"></script>
+        <script src="app/user/register.controller.js"></script>
+        <script src="app/user/register.service.js"></script>
+        <script src="app/layout/shell.controller.js"></script>
+        <script src="app/layout/sidebar.controller.js"></script>
+        <script src="app/layout/topmenu.controller.js"></script>
+        <script src="app/chat/chat.module.js"></script>
+        <script src="app/chat/chat.controller.js"></script>
+        <script src="app/chat/chat.route.js"></script>
+        
+        <script src="app/room/room.module.js"></script>
+        <script src="app/room/room.controller.js"></script>
+        <script src="app/room/room.route.js"></script>
+
+        <script src="app/quiz/quiz.module.js"></script>
+        <script src="app/quiz/quiz.controller.js"></script>
+        <script src="app/quiz/quiz.route.js"></script>
+        
+        <script src="app/quizquestions/quizquestions.module.js"></script>
+        <script src="app/quizquestions/quizquestions.controller.js"></script>
+        <script src="app/quizquestions/quizquestions.route.js"></script>
+
+         <script src="app/chess/chess.module.js"></script>
+        <script src="app/chess/chess.controller.js"></script>
+        <script src="app/chess/chess.route.js"></script>
+
+        <script src="app/domain/domain.module.js"></script>
+        <script src="app/domain/domain.controller.js"></script>
+        <script src="app/domain/domain.crud.controller.js"></script>
+        <script src="app/domain/domain.route.js"></script>
+
+
+        <script src="app/domaintree/domaintree.module.js"></script>
+        <script src="app/domaintree/domaintree.controller.js"></script>
+        <script src="app/domaintree/domaintree.route.js"></script>
+
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/services.js"></script>
+        <script>
+        $(document).ready(function() {
+        $('#uploadForm').submit(function() {
+        $(this).ajaxSubmit({
+        error: function(xhr) {
+        status('Error: ' + xhr.status);
+        },
+        success: function(response) {
+        console.log(response);
+        }
+        });
+        //Very important line, it disable the page refresh.
+        return false;
+        });
+        });
+        </script>
+    </body>
+</html>

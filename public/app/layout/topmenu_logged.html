@@ -1,0 +1,70 @@
+<div id="navbar" class="navbar-collapse collapse" role="navigation">
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <span class="nav-btn cr-logged-user-name">Welcome, {{vm.name}}!</span>
+        </li>
+        <li>
+            <a class="btn btn-yellow login" ui-sref="login">
+                <span class="nav-btn" ng-click="vm.logout()">Log Out</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav-left list-unstyled">
+            <li>
+                <a href="#/" data-toggle-min-nav="" class="toggle-min"><i class="fa fa-bars"></i></a>
+            </li>
+            <li class="dropdown text-normal nav-profile" dropdown="" is-open="status.isopenProfile" style="">
+                <a href="javascript:;" class="dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false" aria-disabled="false">
+                    <img src="images/g1.jpg" alt="" class="img-circle img30_30">
+                    <span class="hidden-xs">
+                        <span data-translate="LISA" class="ng-scope">Lisa</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-dark with-arrow">
+                    <li>
+                        <span>
+                            <i class="fa fa-user"></i>
+                            <span data-translate="MY_PROFILE" class="ng-scope" ng-click="vm.profile()">My Profile</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#/task/task">
+                            <i class="fa fa-check"></i>
+                            <span data-translate="MY_TASKS" class="ng-scope">My Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/page/lock-screen">
+                            <i class="fa fa-lock"></i>
+                            <span data-translate="LOCK" class="ng-scope">Lock</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/page/signin">
+                            <i class="fa fa-sign-out"></i>
+                            <span data-translate="LOG_OUT" class="ng-scope">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown langs text-normal ng-scope"   dropdown="" is-open="status.isopenLang">
+                <a href="javascript:;" class="dropdown-toggle active-flag" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false" aria-disabled="false">
+                    <div class="flag flags-american"></div>
+                </a>
+                <ul class="dropdown-menu dropdown-dark with-arrow list-langs" role="menu">
+                    <li data-ng-show="lang !== 'English' " aria-hidden="true" class="ng-hide">
+                        <a href="javascript:;" data-ng-click="setLang('English')"><div class="flag flags-american"></div> English</a></li>
+                    <li data-ng-show="lang !== 'Español' " aria-hidden="false" class="">
+                        <a href="javascript:;" data-ng-click="setLang('Español')"><div class="flag flags-spain"></div> Español</a></li>
+                    <li data-ng-show="lang !== '日本語' " aria-hidden="false" class="">
+                        <a href="javascript:;" data-ng-click="setLang('日本語')"><div class="flag flags-japan"></div> 日本語</a></li>
+                    <li data-ng-show="lang !== '中文' " aria-hidden="false" class="">
+                        <a href="javascript:;" data-ng-click="setLang('中文')"><div class="flag flags-china"></div> 中文</a></li>
+                    <li data-ng-show="lang !== 'Portugal' " aria-hidden="false" class="">
+                        <a href="javascript:;" data-ng-click="setLang('Portugal')"><div class="flag flags-portugal"></div> Portugal</a></li>
+                    <li data-ng-show="lang !== 'Русский язык' " aria-hidden="false" class="">
+                        <a href="javascript:;" data-ng-click="setLang('Русский язык')"><div class="flag flags-russia"></div> Русский язык</a></li>
+                </ul>
+            </li>
+        </ul>
+</div>

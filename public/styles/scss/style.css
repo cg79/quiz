@@ -1,0 +1,196 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Neutra-demi";
+  src: url("/src/fonts/Neutra2Text-Demi.otf"); }
+
+@font-face {
+  font-family: "Neutra-bold";
+  src: url("/src/fonts/Neutra2Text-Bold.otf"); }
+
+@font-face {
+  font-family: "Neutra-book";
+  src: url("/src/fonts/Neutra2Text-Book.otf"); }
+
+body {
+  font-family: "Neutra-book";
+  font-size: 19px; }
+
+h1, h2, h3, h4 {
+  margin: 10px 0 20px 0; }
+
+label, h5, h6 {
+  margin: 5px 0 10px 0; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 29px; }
+
+h3 {
+  font-size: 26px; }
+
+h4 {
+  font-size: 22px; }
+
+span, p, h5 {
+  font-size: 19px; }
+
+h6 {
+  font-size: 17px; }
+
+/*Menu*/
+.navbar-default {
+  background: #fff;
+  border: none; }
+
+.navbar-brand {
+  height: auto; }
+
+.navbar-right {
+  margin-top: 20px; }
+
+.logo {
+  width: 380px;
+  height: 40px; }
+
+.btn,
+.btn * {
+  font-family: "Neutra-demi";
+  text-transform: uppercase; }
+
+.navbar-right .btn {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 8px 14px 2px 14px;
+  margin: 0 0 0 10px;
+  font-family: "Neutra-demi";
+  text-transform: uppercase; }
+
+.btn-yellow {
+  background: #fcaf17; }
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+  background: #1a1347 !important; }
+
+.navbar-right ul {
+  margin: 0; }
+  .navbar-right ul li {
+    float: left;
+    margin: 0 0 0 16px; }
+    .navbar-right ul li a {
+      -moz-border-radius: 29px;
+      -webkit-border-radius: 29px;
+      border-radius: 29px;
+      position: relative;
+      display: block;
+      height: 30px;
+      font-family: "Neutra-demi";
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #fcaf17;
+      overflow: hidden;
+      transition: all 200ms ease-out;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out; }
+      .navbar-right ul li a span {
+        position: relative;
+        display: block;
+        z-index: 9; }
+
+li a span.nav-btn {
+  font-size: 17px !important; }
+
+.nav-btn {
+  padding: 0px 10px 0px 30px;
+  background-size: 18px auto;
+  background-repeat: no-repeat;
+  background-position: 5px 0px; }
+  a.contact-icon .nav-btn {
+    background-image: url(../images/small-email-icon.png); }
+  a.sign-up .nav-btn {
+    background-image: url(../images/small-sign-up-icon.png); }
+  a.login .nav-btn {
+    background-image: url(../images/small-login-icon.png); }
+
+/*End Menu*/
+/* Form Elements */
+select,
+textarea,
+input {
+  -moz-border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important;
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 0 #fff !important;
+  -moz-box-shadow: 0 0 0 #fff !important;
+  box-shadow: 0 0 0 #fff !important;
+  font-size: 16px !important;
+  font-family: "Neutra-book"; }
+  select:hover,
+  textarea:hover,
+  input:hover {
+    border-color: #9E9E9E; }
+  select:focus,
+  textarea:focus,
+  input:focus {
+    -webkit-box-shadow: 0 0 0 #fff !important;
+    -moz-box-shadow: 0 0 0 #fff !important;
+    box-shadow: 0 0 0 #fff !important;
+    border-color: #1a1347 !important; }
+
+.form-group {
+  margin-bottom: 10px; }
+
+.select2-drop {
+  padding: 10px !important; }
+
+/* End Form Elements */

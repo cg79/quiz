@@ -1,0 +1,50 @@
+<section class="mainbar clearfix">
+    <section class="matter clearfix">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-4">
+                <h2>Register account</h2>
+                <h6 class="alreadyHaveAccount">Already have an account? <a ui-sref="login">Login here</a></h6>
+                
+                <form name="vm.registrationForm" ng-submit="vm.register()" novalidate>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" required class="form-control" id="registerEmail" name="registerEmail" ng-model="vm.email" required>
+
+                        <p ng-show="vm.registrationForm.registerEmail.$error.email && !vm.registrationForm.registerEmail.$pristine" class="has-error">Email invalid.</p>
+                        <p ng-show="vm.registrationForm.registerEmail.$error.required && !vm.registrationForm.registerEmail.$pristine" class="has-error">Required</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerUsername">Username</label>
+                        <input type="text" required class="form-control" id="registerUsername" name="registerUsername" ng-model="vm.username" required>
+
+                        <p ng-show="vm.registrationForm.registerUsername.$error.required && !vm.registrationForm.registerUsername.$pristine" class="has-error">Required</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" required class="form-control" id="registerPassword" name="registerPassword" ng-model="vm.password">
+
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" required class="form-control" id="registerConfirmPassword" name="registerConfirmPassword" ng-model="vm.confirmPassword" pw-check="registerPassword"  required>
+                    </div>
+
+                    
+                    <div class="form-group msg-block" ng-show="vm.registrationForm.$error">
+                        <span class="msg-error" ng-show="vm.registrationForm.registerConfirmPassword.$error.pwmatch">
+                            Passwords don't match.
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn-square btn-block">Register and start a free trial</button>
+
+                    <span class="error">{{vm.Message}}</span>
+                </form>
+            </div>
+        </div>
+    </section>
+</section>

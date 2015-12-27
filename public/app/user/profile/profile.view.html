@@ -1,0 +1,59 @@
+﻿<section class="mainbar clearfix">
+    <section class="matter clearfix">
+        <div class="row">       
+      
+            <div class="col-xs-12 cr-separator"><div class="cr-blank"></div></div>
+            <div class="col-md-4 col-md-offset-4">
+                <!--<div id="login-bar" ng-controller="ChangePasswordController">-->
+                <ng-form name="vmModal.frmProfile" novalidate>
+
+                    <div class="form-group">
+                        <label for="userName">User Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="User Name"
+                               id="userName"
+                               name="userName" 
+                               ng-model="vmModal.data.login" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" required class="form-control" id="registerEmail" name="registerEmail" ng-model="vmModal.data.email" required>
+
+                        <p ng-show="vmModal.frmProfile.registerEmail.$error.email && !vmModal.frmProfile.registerEmail.$pristine" class="has-error">Email invalid.</p>
+                        <p ng-show="vmModal.frmProfile.registerEmail.$error.required && !vmModal.frmProfile.registerEmail.$pristine" class="has-error">Required</p>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="First Name"
+                               id="firstName"
+                               name="firstName"
+                               ng-model="vmModal.data.firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="Last Name"
+                               id="lastName"
+                               name="lastName"
+                               ng-model="vmModal.data.lastName" required>
+                    </div>
+
+
+                    <button class="btn-square btn-block" ng-click="vmModal.updateProfile()" ng-disabled="vmModal.frmProfile.$invalid">Update Profile</button>
+
+                    <span class="has-error">{{vmModal.Message}}</span>
+
+                </ng-form>
+                <!--</div>-->
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,39 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="row">
+
+            <div class="col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-4">
+                <h2>Login</h2>
+                <h6>Please enter your login details.</h6>
+
+                    <form name="vm.loginForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="loginUser">Username</label>
+                            <input type="text" class="form-control" required id="username"  name="username" ng-model="vm.username">
+                            <p ng-show="vm.loginForm.username.$invalid && !vm.loginForm.username.$pristine" class="has-error">Username required.</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" required id="password" name="password" ng-model="vm.password">
+                            <p ng-show="vm.loginForm.password.$invalid && !vm.loginForm.password.$pristine" class="has-error">Password required.</p>
+                        </div>
+                        <div class="form-group">                        
+                        <a href="#" ui-sref="forgotpassword">I forgot my password</a>
+                        </div>
+                        <!--ng-click="vm.showForgotPasswordScreen()"-->                        
+                        <button type="submit" class="btn-square btn-block" ng-click="vm.login()">Login</button>                        
+                        
+                        <div class="form-group">
+                            <span class="has-error">{{vm.Message}}</span>
+                        </div>
+                        
+                            <div class="checkbox rememberMe pull-left">                                
+                                <input id="chkRemember" type="checkbox" ng-model="vm.RememberMe"> <label for="chkRemember"> Remember me</label>                                
+                            </div>
+                        
+                    </form>
+                </div>
+            </div>
+    </section>
+</section>

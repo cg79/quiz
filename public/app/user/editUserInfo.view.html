@@ -1,0 +1,58 @@
+﻿<section class="mainbar clearfix">
+    <section class="matter clearfix">
+        <div class="row">            
+            <div class="col-xs-12 cr-separator"><div class="cr-blank"></div></div>
+            <div class="col-md-4 col-md-offset-4">
+                <!--<div id="login-bar" ng-controller="ChangePasswordController">-->
+                <ng-form name="vm.frmnewp" novalidate>
+
+                    <div class="form-group">
+                        <label for="userName">User Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="User Name"
+                               id="userName"
+                               name="userName" 
+                               ng-model="vm.userName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" required class="form-control" id="registerEmail" name="registerEmail" ng-model="vm.email" required>
+
+                        <p ng-show="vm.registrationForm.registerEmail.$error.email && !vm.registrationForm.registerEmail.$pristine" class="has-error">Email invalid.</p>
+                        <p ng-show="vm.registrationForm.registerEmail.$error.required && !vm.registrationForm.registerEmail.$pristine" class="has-error">Required</p>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="First Name"
+                               id="firstName"
+                               name="firstName"
+                               ng-model="vm.firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="input"
+                               class="form-control"
+                               placeholder="Last Name"
+                               id="lastName"
+                               name="lastName"
+                               ng-model="vm.lastName" required>
+                    </div>
+
+
+                    <button class="btn-square btn-block" ng-click="vm.updateProfile()" ng-disabled="vm.frmnewp.$invalid">Update Profile</button>
+
+                    <span class="has-error">{{vm.Message}}</span>
+
+                </ng-form>
+                <!--</div>-->
+            </div>
+        </div>
+    </section>
+</section>

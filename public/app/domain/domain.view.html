@@ -1,0 +1,21 @@
+
+sdf
+<div class="row">
+	{{vm.domain}}
+	<!-- <div ng-if="vm.domain == null">  -->
+	<button type="button" class="btn btn-info" ng-click="vm.showAddDomainPopup()">New Domain</button>
+	<!-- </div> -->
+	<div ng-if="vm.domain != null">
+		<div class="col-sm-4 has-error" ng-click="vm.navigateUp(vm.domain)">
+			<!-- <h2>{{vm.domain.name}}</h2> -->
+			<h2>Up</h2>
+			<h2 ng-click="vm.navigateToAddQuestion()">Add Question</h2>
+		</div>
+	</div>
+	<div ng-repeat="domain in vm.domains">
+		<div class="clearfix" ng-if="$index % 3 == 0"></div>
+		<div class="col-sm-4" ng-click="vm.navigateDown(domain)">
+			<h2>{{domain.name}}</h2>
+		</div>
+	</div>
+</div>

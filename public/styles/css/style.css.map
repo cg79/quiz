@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AASA,OAAO,CCJH,kBAAkB,CDKI,GAAG,CCJzB,qBAAqB,CDIC,GAAG,CCHzB,aAAa,CDGS,GAAG,CAC3B,UAAU,CEXJ,IAAI,CFYV,WAAW,CEVH,KAAK",
+"sources": ["style.scss","_mixines.scss","_base.scss"],
+"names": [],
+"file": "style.css"
+}

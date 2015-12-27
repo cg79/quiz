@@ -1,0 +1,10 @@
+<div class="row">
+    <div ng-repeat="room in vm.rooms">
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4">
+            <h2>{{room.name}}</h2>
+            <span ng-click="vm.createRoom(room)">New</span>
+            <button type="button" class="btn btn-info" ng-click="vm.goToQuiz(room)">Play</button>
+        </div>
+    </div>
+</div>
